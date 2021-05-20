@@ -2,7 +2,7 @@
   "name": "paga-collect",
   "version": "1.0.0",
   "description": "The Paga Collect API allows anyone (payment request initiator) to initiate a payment request to a third party and automatically get notified when the payment request is fulfilled",
-  "main": "PagaCollect.js",
+  "main": "PagaCollectClient.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,9 @@
     "an",
     "agent"
   ],
+  "repository": {
+    "url": "https://github.com/Paga-Developer-Community/paga-collect-node-lib"
+  },
   "type": "module",
   "author": "Paga",
   "license": "ISC",
