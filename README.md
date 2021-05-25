@@ -1,4 +1,4 @@
-# Paga Collect Nodejs API Library v1.0.0
+# Paga Collect Nodejs API Library v1.0.1
 
 ## Paga Collect Services exposed by the library
 
@@ -14,7 +14,7 @@ For more information on the services listed above, visit the [Paga DEV website](
 `npm install paga-collect`
 
 ```
-import PagaCollectClient from './PagaCollectClient.js';
+const PagaCollectClient = require('paga-collect');
 
 const pagaCollectClient = new PagaCollectClient.Builder()
                             .setClientId("<publicId>")

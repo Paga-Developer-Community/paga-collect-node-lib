@@ -1,6 +1,6 @@
 {
   "name": "paga-collect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The Paga Collect API allows anyone (payment request initiator) to initiate a payment request to a third party and automatically get notified when the payment request is fulfilled",
   "main": "PagaCollectClient.js",
   "scripts": {
@@ -27,6 +27,7 @@
     "@types/node": "^15.0.2"
   },
   "dependencies": {
+    "@types/node-fetch": "^2.5.10",
     "js-sha512": "^0.8.0",
     "node-fetch": "^2.6.1"
   }
