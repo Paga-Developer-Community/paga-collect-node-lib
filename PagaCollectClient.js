@@ -1,4 +1,4 @@
-import PagaCollect from "./PagaCollect.js";
+const PagaCollect = require('./PagaCollect');
 
 
 
@@ -33,4 +33,4 @@ class PagaCollectClient {
 
 }
 
-export default PagaCollectClient;
+module.exports = PagaCollectClient;

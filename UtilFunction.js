@@ -1,5 +1,7 @@
-import crypto from 'crypto';
-import fetch from 'node-fetch';
+// @ts-nocheck
+const crypto = require('crypto');
+const fetch = require('node-fetch');
+
 class UtilFunction {
 
     constructor(build) {
@@ -95,4 +97,4 @@ class UtilFunction {
 
 }
 
-export default UtilFunction;
+module.exports = UtilFunction;
