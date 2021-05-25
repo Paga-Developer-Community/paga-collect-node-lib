@@ -1,5 +1,5 @@
-import Builder from './PagaCollectClient.js';
-import UtilFunction from './UtilFunction.js';
+const Builder = require('./PagaCollectClient');
+const UtilFunction = require('./UtilFunction');
 
 class PagaCollect extends UtilFunction {
 
@@ -94,7 +94,6 @@ class PagaCollect extends UtilFunction {
             }
 
             console.log(hashObj);
-            // let hashParams = `${referenceNumber}${amount}${currency}${payer.phoneNumber}${payer.email}${payee.accountNumber}${payee.phoneNumber}${payee.bankId}${payee.bankAccountNumber}`;
             let hashParams = Object.values(this.filterOptionalFields(hashObj)).join("");
             console.log(hashParams);
             let header = this.buildHeader(hashParams);
@@ -164,15 +163,10 @@ class PagaCollect extends UtilFunction {
 
 
 
-    // build() {
-    //     return new PagaCollect(this);
-    // }
     static Builder() {
-
         return new Builder()
-        // return new PagaCollect(new Builder());
     }
 
 }
 
-export default PagaCollect;
+module.exports= PagaCollect;
