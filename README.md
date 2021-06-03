@@ -62,6 +62,35 @@ let data = {
     });
 ```
 
+**Create Persistent Payment Account**
+
+An operation for business to create Persistent Payment Account Numbers that can be assigned to their customers for payment collection. These account numbers belong to the organization and are assigned to their customers to make payments anytime via Bank or Paga transfers.
+
+To make use of this function, call the ****registerPersistentPaymentAccount**** inside PagaCollectClient which will return a JSONObject.
+
+```
+
+let data = {
+      "referenceNumber": "53yw19011000009112",
+      "phoneNumber": 07022222222,
+      "firstName": "John",
+      "lastName": "Doe",
+      "accountName": John DOe,
+      "financialIdentificationNumber":  22222222222220,
+      "accountReference": 2222222222,
+      "creditBankId": 40090E2F-7446-4217-9345-7BBAB7043C4C,
+      "creditBankAccountNumber": 0000000000,
+      "callBackUrl": "http://localhost:5000/core/webhook/paga"
+      }
+
+  pagaCollectClient.registerPersistentPaymentAccount(data).then(resp => {
+        console.log(JSON.stringify(resp))
+    });
+```
+
+
+
+
 **Get Banks**
 
 Retrieve a list of supported banks and their complementary unique ids on the bank. This is required for populating the payer (optional) and payee objects in the payment request model.
