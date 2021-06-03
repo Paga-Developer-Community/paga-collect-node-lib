@@ -51,14 +51,11 @@ class UtilFunction {
         return data.digest('hex');
     }
 
-
     checkError(response) {
-        console.log(response);
         const {
             statusCode
         } = response;
         if (parseInt(statusCode) <= 2 && parseInt(statusCode) >= 0) {
-            console.log(response);
             return {
                 error: false,
                 response
