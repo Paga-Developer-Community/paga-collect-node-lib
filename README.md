@@ -6,6 +6,7 @@
 - getBanks
 - paymentStatus
 - paymentHistory
+- registerPersistentPaymentAccount
 
 For more information on the services listed above, visit the [Paga DEV website](https://mypaga.readme.io/docs/node-library-2)
 
