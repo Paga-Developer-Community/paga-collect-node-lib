@@ -1,4 +1,4 @@
-# Paga Collect Nodejs API Library v1.1.0
+# Paga Collect Nodejs API Library v1.1.3
 
 ## Paga Collect Services exposed by the library
 
@@ -18,9 +18,9 @@ For more information on the services listed above, visit the [Paga DEV website](
 const PagaCollectClient = require('paga-collect');
 
 const pagaCollectClient = new PagaCollectClient.Builder()
-                            .setClientId("<publicId>")
-                            .setPassword("<password>")
-                            .setApiKey("<apiKey>")
+                            .setClientId("<Public Key/Principal>")
+                            .setPassword("<Secret Key/Credential>")
+                            .setApiKey("<Hash_Key/HMAC>")
                             .setIsTest(true)
                             .build();
 ```
@@ -88,9 +88,6 @@ let data = {
         console.log(JSON.stringify(resp))
     });
 ```
-
-
-
 
 **Get Banks**
 
