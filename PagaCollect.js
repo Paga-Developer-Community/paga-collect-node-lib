@@ -12,7 +12,6 @@ class PagaCollect extends UtilFunction {
       let requestData = {
         referenceNumber,
       };
-      console.log(requestData);
 
       let header = this.buildHeader(referenceNumber);
       let response = await this.postRequest(
@@ -22,7 +21,7 @@ class PagaCollect extends UtilFunction {
       );
       return this.checkError(response);
     } catch (err) {
-      console.log(err);
+      throw new Error(err);
     }
   }
 
@@ -88,7 +87,6 @@ class PagaCollect extends UtilFunction {
       let hashParams = Object.values(this.filterOptionalFields(hashObj)).join(
         ""
       );
-      console.log(hashParams);
       let header = this.buildHeader(hashParams);
       let response = await this.postRequest(
         header,
@@ -187,11 +185,8 @@ class PagaCollect extends UtilFunction {
       let requestData = {
         referenceNumber,
       };
-      console.log(requestData);
 
       let header = this.buildHeader(referenceNumber);
-
-      console.log(this.getBaseUrl("status"));
 
       let response = await this.postRequest(
         header,
@@ -213,11 +208,9 @@ class PagaCollect extends UtilFunction {
         startDateTimeUTC,
         endDateTimeUTC,
       };
-      console.log(requestData);
 
       let header = this.buildHeader(referenceNumber);
 
-      console.log(this.getBaseUrl("history"));
 
       let response = await this.postRequest(
         header,
