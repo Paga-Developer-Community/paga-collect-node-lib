@@ -17,7 +17,7 @@ For more information on the services listed above, visit the [Paga DEV website](
 ```
 const PagaCollectClient = require('paga-collect');
 
-const pagaCollectClient = new PagaCollectClient
+const pagaCollectClient = new PagaCollectClient().
                             .setClientId("<publicId>")
                             .setPassword("<secretkey>")
                             .setApiKey("<HMAC>")
