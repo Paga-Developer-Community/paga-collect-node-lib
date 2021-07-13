@@ -1,4 +1,4 @@
-# Paga Collect Nodejs API Library v1.1.3
+# Paga Collect Nodejs API Library v1.1.4
 
 ## Paga Collect Services exposed by the library
 
