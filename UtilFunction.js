@@ -27,8 +27,6 @@ class UtilFunction {
 
     buildHeader(hashParams) {
 
-        console.log('We are here o')
-        console.log(this.password)
         let basicAuth = this.generateBasicAuth(this.clientId, this.password);
         let pattern = `${hashParams}${this.apiKey}`;
         let hashData = this.generateHash(pattern);
@@ -63,7 +61,6 @@ class UtilFunction {
         } else {
             return {
                 error: true,
-                message: response.statusMessage,
                 response
             }
 
@@ -87,8 +84,14 @@ class UtilFunction {
             headers,
             body: JSON.stringify(jsonData)
         });
-        return await data.json();
-
+        const respStr = await data.text();
+        let resp;
+        try {
+            resp = JSON.parse(respStr)
+        } catch (error) {
+            resp = respStr
+        }
+        return resp;
     }
 
 
