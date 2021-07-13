@@ -17,11 +17,11 @@ For more information on the services listed above, visit the [Paga DEV website](
 ```
 const PagaCollectClient = require('paga-collect');
 
-const pagaCollectClient = new PagaCollectClient.Builder()
-                            .setClientId("<Public Key/Principal>")
-                            .setPassword("<Secret Key/Credential>")
-                            .setApiKey("<Hash_Key/HMAC>")
-                            .setIsTest(true)
+const pagaCollectClient = new PagaCollectClient
+                            .setClientId("<publicId>")
+                            .setPassword("<secretkey>")
+                            .setApiKey("<HMAC>")
+                            .setTest(true)
                             .build();
 ```
 
