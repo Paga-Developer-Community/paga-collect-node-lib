@@ -1,4 +1,4 @@
-# Paga Collect Nodejs API Library v1.1.4
+# Paga Collect Nodejs API Library v1.1.5
 
 ## Paga Collect Services exposed by the library
 
@@ -129,6 +129,88 @@ let data = {
     }
 
  pagaCollectClient.paymentHistory(data).then(resp => {
+        console.log(JSON.stringify(resp))
+    });
+```
+
+
+
+**Update Persistent Payment Account**
+
+This endpoint allows for changing any of the account properties except the **accountNumber (NUBAN)** and the **accounReference** properties which cannot be changed.
+To make use of this function, call the **updatePersistentPaymentAccount** inside PagaCollectClient which will return a JSONObject.
+
+```
+   let data = {
+        referenceNumber: uuidv4(),
+        accountIdentifier: "0013188322",
+        firstName: "Shane",
+        lastName: "Moss",
+
+    }
+
+ pagaCollectClient.updatePersistentPaymentAccount(data).then(resp => {
+        console.log(JSON.stringify(resp))
+    });
+```
+
+
+**Get Persistent Payment Account**
+
+A method to query the properties associated with an existing persistent payment account.
+
+To make use of this function, call the **getPersistentPaymentAccount** inside PagaCollectClient which will return a JSONObject.
+
+```
+ let data = {
+        referenceNumber: uuidv4(),
+        accountIdentifier: "0013188322",
+
+    }
+
+ pagaCollectClient.getPersistentPaymentAccount(data).then(resp => {
+        console.log(JSON.stringify(resp))
+    });
+```
+
+
+**Delete Persistent Payment Account**
+
+This endpoint allows for deleting a persistent payment account.
+
+To make use of this function, call the **deletePersistentPaymentAccount** inside PagaCollectClient which will return a JSONObject.
+
+```
+
+    let data = {
+        referenceNumber: uuidv4(),
+        accountIdentifier: "0013188322"
+
+    }
+
+ pagaCollectClient.deletePersistentPaymentAccount(data).then(resp => {
+        console.log(JSON.stringify(resp))
+    });
+```
+
+
+**Payment Request Refund**
+
+This end-point can be used to either cancel or initiate a refund if we were unable to fulfill the request for one reason or the other.
+
+To make use of this function, call the **paymentRequestRefund** inside PagaCollectClient which will return a JSONObject.
+
+```
+
+   let data = {
+        referenceNumber: "e38a59d2-ea69-456f-8b82-4a9288c83bf3",
+        refundAmount: 2000,
+        currency: "NGN",
+        accountIdentifier: "1030850838"
+
+    }
+
+ pagaCollectClient.paymentRequestRefund(data).then(resp => {
         console.log(JSON.stringify(resp))
     });
 ```
