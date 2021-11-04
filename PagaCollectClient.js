@@ -3,21 +3,19 @@ const PagaCollect = require('./PagaCollect');
 
 
 class PagaCollectClient {
-    constructor() {
-        
-    }
+    constructor() {}
     setClientId(clientId) {
-        this.clientId = clientId ;
+        this.clientId = clientId;
         return this;
     }
 
     setPassword(password) {
-        this.password = password ;
+        this.password = password;
         return this;
     }
 
     setApiKey(apiKey) {
-        this.apiKey = apiKey ;
+        this.apiKey = apiKey;
         return this;
     }
 
@@ -27,7 +25,7 @@ class PagaCollectClient {
     }
 
     build() {
-   
+
         return new PagaCollect(this);
     }
 
