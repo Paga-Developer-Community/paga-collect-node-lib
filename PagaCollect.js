@@ -1,5 +1,5 @@
-import Builder from './PagaCollectClient.js';
-import UtilFunction from './UtilFunction.js';
+const Builder = require("./PagaCollectClient");
+const UtilFunction = require("./UtilFunction");
 
 class PagaCollect extends UtilFunction {
 
@@ -673,4 +673,4 @@ const ENDPOINT = {
 
 
 
-export default PagaCollect;
+module.exports = PagaCollect;
