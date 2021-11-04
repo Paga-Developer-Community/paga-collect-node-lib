@@ -1,4 +1,4 @@
-# Paga Collect Nodejs API Library v1.1.5
+# Paga Collect Nodejs API Library v1.1.6
 
 ## Paga Collect Services exposed by the library
 
@@ -133,8 +133,6 @@ let data = {
     });
 ```
 
-
-
 **Update Persistent Payment Account**
 
 This endpoint allows for changing any of the account properties except the **accountNumber (NUBAN)** and the **accounReference** properties which cannot be changed.
@@ -154,7 +152,6 @@ To make use of this function, call the **updatePersistentPaymentAccount** inside
     });
 ```
 
-
 **Get Persistent Payment Account**
 
 A method to query the properties associated with an existing persistent payment account.
@@ -172,7 +169,6 @@ To make use of this function, call the **getPersistentPaymentAccount** inside Pa
         console.log(JSON.stringify(resp))
     });
 ```
-
 
 **Delete Persistent Payment Account**
 
@@ -192,7 +188,6 @@ To make use of this function, call the **deletePersistentPaymentAccount** inside
         console.log(JSON.stringify(resp))
     });
 ```
-
 
 **Payment Request Refund**
 
