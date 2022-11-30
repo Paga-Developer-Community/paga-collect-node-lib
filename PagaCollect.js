@@ -1,3 +1,4 @@
+
 const Builder = require("./PagaCollectClient");
 const UtilFunction = require("./UtilFunction");
 
@@ -445,11 +446,12 @@ class PagaCollect extends UtilFunction {
     /**
      * @param   {Object}  data              Request object
      * @param   {string}  data.referenceNumber - A unique reference number provided by the business, identifying the transaction. This reference number will be preserved on the Paga platform to reconcile the operation across systems and will be returned in the response.
-     * @param   {string}  data.phoneNumber                        The amount of money to transfer to the recipient.
+     * @param   {string}  data.phoneNumber       The customer's phone number
+     * @param   {string}  data.email             The customer's email
      * @param   {string}  data.firstName                      The currency of the operation, if being executed in a foreign currency.
      * @param   {string}  data.lastName           The account identifier for the recipient receiving the money transfer. This account identifier may be a phone number, account nickname, or any other unique account identifier supported by the Paga platform. If destinationBank is specified, this is the bank account number.
      * @param   {string}  data.accountName               For money transfers to a bank account, this is the destination bank code.
-     * @param   {string}  data.financialIdentificationNumber   	The customer's Bank verification Number (BVN)
+     * @param   {string}  data.financialIdentificationNumber    The customer's Bank verification Number (BVN)
      * @param   {string}  data.accountReference              The authentication credentials for the user sending money if the money is being sent on behalf of a user
      * @param   {string=}  data.creditBankId                  public Id of the bank that you want deposits to be transferred directly to fo every payment.
      * @param   {string=}  data.creditBankAccountNumber       This must be provided if creditBankId is included in the request payload. It is the bank account number of the bank that you want deposits to be transferred to. This must be a valid account number for the bank specified by creditBankId
@@ -472,6 +474,7 @@ class PagaCollect extends UtilFunction {
             const {
                 referenceNumber,
                 phoneNumber,
+                email,
                 firstName,
                 lastName,
                 accountName,
@@ -485,6 +488,7 @@ class PagaCollect extends UtilFunction {
             let requestData = {
                 referenceNumber,
                 phoneNumber,
+                email,
                 firstName,
                 lastName,
                 accountName,
