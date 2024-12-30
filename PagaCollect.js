@@ -456,7 +456,7 @@ class PagaCollect extends UtilFunction {
      * @param   {string=}  data.creditBankId                  public Id of the bank that you want deposits to be transferred directly to fo every payment.
      * @param   {string=}  data.creditBankAccountNumber       This must be provided if creditBankId is included in the request payload. It is the bank account number of the bank that you want deposits to be transferred to. This must be a valid account number for the bank specified by creditBankId
      * @param   {string=}  data.callbackUrl                   A custom callback URL for the payment webhook notifications for this specific account to be sent to. If provided, requests are sent to this URL exactly as provided. This allows you to set custom query parameters to the URL which you will be provided during webhook notifications for this specific account.
-     *
+     * @param   {number=}  data.fundingTransactionLimit       The maximum amount that can be transferred to the persistent account generated. If an amount greater than the limit is transferred, such transaction will be declined automatically by the senders bank. This is optional.
      * @returns {Promise< {"error":false,
      *                    "response": {
      *                    "response" :0, 
