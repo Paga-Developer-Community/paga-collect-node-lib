@@ -483,6 +483,7 @@ class PagaCollect extends UtilFunction {
                 creditBankId = null,
                 creditBankAccountNumber = null,
                 callbackUrl = null,
+                fundingTransactionLimit=null,
             } = data;
 
             let requestData = {
@@ -497,6 +498,7 @@ class PagaCollect extends UtilFunction {
                 creditBankId,
                 creditBankAccountNumber,
                 callbackUrl,
+                fundingTransactionLimit,
             };
 
             const hashObj = {
