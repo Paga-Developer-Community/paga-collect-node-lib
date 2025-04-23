@@ -373,6 +373,7 @@ class PagaCollect extends UtilFunction {
             const hashObj = {
                 referenceNumber,
                 accountIdentifier,
+                financialIdentificationNumber,
                 creditBankId,
                 creditBankAccountNumber,
                 callbackUrl
