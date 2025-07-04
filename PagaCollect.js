@@ -249,7 +249,7 @@ class PagaCollect extends UtilFunction {
 
     /**
      * @param   {Object}  data              Request object
-     * @param   {string=}  data.referenceNumber - A unique reference number representing a request. If provided, it will restrict results to only those tied to the request with that specific reference numbe
+     * @param   {string}  data.referenceNumber - A unique reference number representing a request. If provided, it will restrict results to only those tied to the request with that specific reference numbe
      * @param   {string}  data.startDateTimeUTC - A timestamp representing the start of the transaction history request. Range must be less than or equal to 3 months
      * @param   {string}  data.endDateTimeUTC - A timestamp representing the end of the transaction history request. Range must be less than or equal to 3 months
      *
@@ -289,7 +289,7 @@ class PagaCollect extends UtilFunction {
     async paymentHistory(data) {
         try {
             const {
-                referenceNumber,
+                referenceNumber = "",
                 startDateTimeUTC,
                 endDateTimeUTC
             } = data;
