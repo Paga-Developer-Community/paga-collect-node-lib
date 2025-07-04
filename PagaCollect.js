@@ -295,9 +295,11 @@ class PagaCollect extends UtilFunction {
             } = data;
 
             let requestData = {
-                referenceNumber,
                 startDateTimeUTC,
                 endDateTimeUTC
+            }
+            if (referenceNumber) {
+                requestData.referenceNumber = referenceNumber;
             }
             console.log(requestData);
 
